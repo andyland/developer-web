@@ -1,0 +1,18 @@
+---
+layout : default
+---
+<div class="page-header">
+  <h1>{{ page.title }} {{# page.resource.endpoint }} <small>{{ . }}</small>{{/page.resource.endpoint}}</h1>
+  <div class="supportedhttpverbs">
+    Supported Actions: 
+    {{# page.resource.verbs }}
+    <span class="httpverb"><a href="#{{ . }}">{{ . }}</a></span>
+    {{/page.resource.verbs}}
+  </div>
+</div>
+
+<div class="row">
+  <div class="span12">
+    {{{ page.content }}}
+  </div>
+</div>

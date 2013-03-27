@@ -1,0 +1,27 @@
+title : com.tunewiki.developer
+tagline: Build something.
+author :
+  name : Tunewiki API Team
+  email : api@tunewiki.com
+  github : username
+  twitter : username
+  feedburner : feedname
+
+archive_path : "/archive"
+
+year: 2013
+
+api_url_prefix : "http://betaapi.tunewiki.com/tunewiki-public-api"
+
+navigation :
+  - blog.html
+  - pricing.md
+  - contact.md
+
+general :
+  - api/getting-access.md
+  - api/response/index.md
+  - api/response/errors.md
+
+resource :
+  - api/resource/lyrics.md

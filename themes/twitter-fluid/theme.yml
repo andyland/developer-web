@@ -1,0 +1,26 @@
+{
+  "stylesheets" : {
+    "default" : [
+      "bootstrap.min.css",
+      "style.css",
+      "bootstrap-responsive.css"
+    ],
+   
+    "widgets" : {
+      "google_prettify" : "twitter-bootstrap.css"
+    }
+    
+  },
+
+  "javascripts" : {
+    "default" : [
+      "jquery.js",
+      "bootstrap.min.js"
+    ]
+  },
+  
+  "manifest" : {
+    "author" : "Jacob Thornton and Mark Otto",
+    "website" : "http://twitter.github.com/bootstrap"
+  }
+}
