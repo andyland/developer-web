@@ -1,21 +1,14 @@
-**This version is for [ruhohSpec v2.0.alpha](http://ruhoh.com/edge/) and is only compatible with ruhoh 2.0.x**
+The code that generates [dev.tunewiki.com](http://dev.tunewiki.com)
 
-A default blog scaffold for **ruhoh** compatible static blog parsers.
+Uses [ruhoh](http://ruhoh.com) to generate the static files.
 
-## Usage
+See our [blog post](http://dev.tunewiki.com/ruhoh-+-s3-you-re-looking-at-it/) for more information about how this site was created.
 
-### ruby 1.9.2+
+**requires ruby - we use 1.9**
 
-Presently ruhoh 2.0.alpha should be bundled using bundler so you can use both ruhoh 1.x and ruhoh 2.x at the same time.
+The following instructions are how to get ruhoh running so you can see this site locally.
 
-#### Clone the Blog Scaffold
-
-    $ git clone git://github.com/ruhoh/blog.git blog-v2
-
-Checkout **2.0.alpha branch**
-
-    $ cd blog-v2
-    $ git checkout 2.0.alpha
+## Getting Started
 
 #### Get Bundler
 
@@ -49,53 +42,7 @@ To access the bundled ruhoh (2.0.alpha) you'll need precede your commands with `
 
     $ bundle exec ruhoh help
 
-#### Make it Your Own
-
-The origin initially points to: git@github.com:ruhoh/blog.git
-
-To add your own remote, first create a new repository on GitHub. ex: git@github.com:USERNAME/my-ruhoh-blog.git
-
-    $ git remote rm origin
-    $ git remote add origin git@github.com:USERNAME/my-ruhoh-blog.git
-
-Now you can add your own content and push it to your repository:
-
-    $ git add .
-    $ git commit -m 'some new content'
-
-## Upgrading
-
-It's best to first get a fresh blog installed and running locally via bundler as outlined.
-Next you'll want to compare your existing ruhoh 1.x blog to the new blog scaffold.
-
-[You can view a comparison of the commits between the two version on GitHub][Compare]
-
-Once you've converted your existing blog, try running it with ruhoh 2.0.x by copying the [Gemfile][] into your existing blog and running it with bundler as outlined above.
-
-When ruhoh 2.0. is officially shipped, you'll be able to download and use it as normal:
-
-    $ gem install ruhoh
-
-But not yet!
-
-## Help
-
-Feel free to submit installation and upgrading issues via [GitHub Issues](https://github.com/ruhoh/blog/issues)
-They can be basic trouble-shooting questions.
-
-Also contact me via:
-
-- email: plusjade@gmail.com
-- twitter: [@ruhohBlog](http://twitter.com/ruhohBlog)
-
-## Documentation
-
-See <http://ruhoh.com/docs/2> for full usage and documentation.
-
 ## License
 
 Released under the [MIT License](http://www.opensource.org/licenses/MIT)
 
-
-[Compare]: https://github.com/ruhoh/blog/compare/2.0.alpha
-[Gemfile]: https://github.com/ruhoh/blog/blob/2.0.alpha/Gemfile
