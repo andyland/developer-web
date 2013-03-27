@@ -15,12 +15,13 @@ Things were running smooth, that is unless one of our memcached nodes failed.  A
 know memcached is ephemeral storage -- if the server or process crashes the entire cache
 is lost.  When we would lose a memcached node we would put additional strain on our MySQL cluster.
 Additional memcached nodes would mitigate the problem to a point but this was still a pretty
-big problem for us to solve.
+big problem for us to solve.  We didn't want to have to maintain an ever-larger mysql cluster just
+as protection from memcached node failures.
 
 Additionally, trying to shard and replicate a very large and very active MySQL cluster is tough --
 not to mention the challenge of making schema changes. We found ourselves thinking WAY too
 much about MySQL and conversations like the following could be heard more and more regularly.
-> **Developer**: "Hey Mr. DBA - I need a new field added to the `foo` table"  
+> **Developer**: "Hey Mr. DBA - I need a new column added to the `foo` table"  
 > **DBA**: "Oh, well that table has 100 million rows in it.  That's going to take a while"  
 > **Developer**: "Oh but we want to launch this new feature today"  
 > **DBA**: "Try next week - I have to babysit the servers and roll this change out from the slaves backward"  
