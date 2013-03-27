@@ -15,7 +15,7 @@ Things were running smooth, that is unless one of our memcached nodes failed.  A
 know memcached is ephemeral storage -- if the server or process crashes the entire cache
 is lost.  When we would lose a memcached node we would put additional strain on our MySQL cluster.
 Additional memcached nodes would mitigate the problem to a point but this was still a pretty
-big problem for us to solve.  We didn't want to have to maintain an ever-larger mysql cluster just
+big problem for us to solve.  We didn't want to have to maintain an ever-larger MySQL cluster just
 as protection from memcached node failures.
 
 Additionally, trying to shard and replicate a very large and very active MySQL cluster is tough --
@@ -33,16 +33,16 @@ Enter [Couchbase](http://www.couchbase.com)
 
 Couchbase was perfect for us for the following reasons:
 
-1.  It's schemaless - no more table changes needed. (no more tables!)
-1.  It speaks "memcached" and our application was already using memcached
+1.  It's schema-less - no more table changes needed. (no more tables!)
+1.  It speaks "memcached" and our application was already using memcached (what doesn't?!)
 1.  It can persist your key-value data to disk so you don't lose your data if the server dies
 1.  It scales every way - no more sharding or replication required
 1.  It's *blazingly* fast
 
 Today we are handling 10x the amount of data with far fewer headaches than ever.
-The couchbase engineers are great help to us when we do have an issue and have even made
+The couchbase engineers are a great help to us when we do have an issue and have even made
 changes based on our requirements or suggestions.
 
 I'm fairly active in the [couchbase community](https://groups.google.com/group/couchbase) and recently 
-did an interview with Couchbase about how we use their product.  [Check it out!](#)
+did an interview with Couchbase about how we use their product.  [Check it out!](http://blog.couchbase.com/couchbase-nosql-tunewiki-billion-records-and-counting)
 
