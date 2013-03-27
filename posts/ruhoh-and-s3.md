@@ -16,7 +16,7 @@ Enter [ruhoh](http://ruhoh.com).
 ### what is ruhoh? ###
 Expanding on the popular static site generator
 [Jekyll](https://github.com/mojombo/jekyll), ruhoh cleans up some things and makes others better.
-For example - instead of jekyll-specific DSL, ruhoh uses a more standard moustache api for it's
+For example - instead of jekyll-specific DSL, ruhoh uses a more standard mustache api for it's
 templating.  It has a command line interface for adding new posts and pages, supports html or,
 what we use for faster dev, [markdown](http://daringfireball.net/projects/markdown) syntax.
 Once you're happy with how your site looks you compile it all to static pages and host it anywhere
