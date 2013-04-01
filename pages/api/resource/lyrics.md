@@ -12,9 +12,9 @@ resource:
 ## <a class="anchor" id="GET"></a>GET
 Use the `GET` verb to get lyrics for an artist and title.
 
-#### Example request: [try it]({{ data.api_url_prefix }}/lyrics/Of%20Montreal/An%20Eluardian%20Instance)
+#### Example request:
 
-    {{ data.api_url_prefix }}/lyrics/Of%20Montreal/An%20Eluardian%20Instance
+    {{ data.api_url_prefix }}/lyrics/Of%20Montreal/An%20Eluardian%20Instance?ts=<current timestamp>&amp;apiKey=<apikey>&amp;apiPass=<apipass>
 **_\*note the artist and title are URL Encoded_**
 
 
