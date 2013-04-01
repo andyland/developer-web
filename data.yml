@@ -20,6 +20,7 @@ navigation :
 
 general :
   - api/getting-access.md
+  - api/apipass.md
   - api/response/index.md
   - api/response/errors.md
 
