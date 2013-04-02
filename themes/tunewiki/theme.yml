@@ -16,6 +16,7 @@
     "default" : [
       "jquery.js",
       "bootstrap.min.js",
+      "socialite.min.js",
       "tunewiki.js"
     ]
   },

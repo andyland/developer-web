@@ -8,7 +8,16 @@ layout : default
 <div class="row">
   <div class="span8">
     {{{ page.content }}}
-    <hr>
+
+      <ul id="social">
+          <li><a class="socialite twitter-share"></a></li>
+          <li><a class="socialite facebook-like" data-layout="button_count"></a></li>
+          <li><a class="socialite googleplus-one" data-size="medium"></a></li>
+          <li><a class="socialite linkedin-share"></a></li>
+          <li><a class="socialite hackernews-share"></a></li>
+      </ul>
+
+      <hr>
     <div class="pagination">
       <ul>
       {{# page.previous }}
