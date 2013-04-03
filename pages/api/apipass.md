@@ -40,9 +40,9 @@ In addition you are posting the variables `username=chad&password=foo`
 
 step 1 output: `GET`  
 step 2 output: `GET\n/lyrics/coldplay/clocks\n`  
-step 3 output: `GET\n/lyrics/coldplay/clocks\n1364859625123456coldplayclocksa rush of blood to the head`  
-step 4 output: `GET\n/lyrics/coldplay/clocks\n1364859625123456coldplayclocksa rush of blood to the headchadfoo`  
-step 5 is to simply hash the string `GET\n/lyrics/coldplay/clocks\n1364859625123456coldplayclocksa rush of blood to the headchadfoo` using your pre-shared key as the hash key.  
+step 3 output: `GET\n/lyrics/coldplay/clocks\n1364859625123456`  
+step 4 output: `GET\n/lyrics/coldplay/clocks\n1364859625123456chadfoo`  
+step 5 is to simply hash the string `GET\n/lyrics/coldplay/clocks\n1364859625123456chadfoo` using your pre-shared key as the hash key.  
 
 - - -
 
