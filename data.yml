@@ -11,7 +11,7 @@ archive_path : "/archive"
 
 year: 2013
 
-api_url_prefix : "http://betaapi.tunewiki.com/tunewiki-public-api"
+api_url_prefix : "http://twapi.tunewiki.com"
 
 navigation :
   - blog.html
