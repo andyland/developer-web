@@ -21,23 +21,28 @@ Java by default returns this value in milliseconds so you must specify you want 
 
 To generate your ApiPass you need to use the following steps:
 
-1.  Concatenate all of your GET (querystring) parameter values together in the order you are sending them (except apiPass of course)
-2.  Concatenate all of your POST (form) parameter values together in the order you are sending them
-3.  Concatenate the result of step 1 to step 2
-4.  HMAC-MD5 Hash this string using your pre-shared key as the hash key
+1.  Start with a string containing the uppercase method you are using.  example: "GET"
+1.  Append to that string a newline and the uri you are requesting, followed by another newline.  example: "GET\n/lyrics/coldplay/clocks\n"
+1.  Append to that string all of your GET (querystring) parameter values together in the order you are sending them (except apiPass of course)
+1.  Append to that string all of your POST (form) parameter values together in the order you are sending them
+1.  HMAC-MD5 Hash this string using your pre-shared key as the hash key
 
 The result is your ApiPass.
 
 Example:
+the uri you are requesting is:  
+`/lyrics/coldplay/clocks`  
+
 the querystring you are sending is:  
-`?ts=1364859625&apiKey=123456&artist=coldplay&title=clocks&album=a rush of blood to the head&apiPass=abcdef`  
+`?ts=1364859625&apiKey=123456&apiPass=abcdef`  
 
 In addition you are posting the variables `username=chad&password=foo`  
 
-step 1 output: `1364859625123456coldplayclocksa rush of blood to the head`  
-step 2 output: `chadfoo`  
-step 3 output: `1364859625123456coldplayclocksa rush of blood to the headchadfoo`  
-step 4 is to simply hash the string `1364859625123456coldplayclocksa rush of blood to the headchadfoo` using your pre-shared key as the hash key.  
+step 1 output: `GET`  
+step 2 output: `GET\n/lyrics/coldplay/clocks\n`  
+step 3 output: `GET\n/lyrics/coldplay/clocks\n1364859625123456coldplayclocksa rush of blood to the head`  
+step 4 output: `GET\n/lyrics/coldplay/clocks\n1364859625123456coldplayclocksa rush of blood to the headchadfoo`  
+step 5 is to simply hash the string `GET\n/lyrics/coldplay/clocks\n1364859625123456coldplayclocksa rush of blood to the headchadfoo` using your pre-shared key as the hash key.  
 
 - - -
 
