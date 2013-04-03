@@ -13,3 +13,7 @@ function resizeSpan9() {
     padding = padding.replace("px", "");
     span9.width($(window).width()-pos.left-padding);
 }
+
+$(document).ready(function() {
+    Socialite.load();
+});
