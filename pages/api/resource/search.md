@@ -14,7 +14,7 @@ Use the `GET` verb to get search results based on a query.
 
 #### Example request:
 
-    {{ data.api_url_prefix }}/search?type=lyrics&q=hear+jerusalem_bells+ts=<current timestamp>&amp;apiKey=<apikey>&amp;apiPass=<apipass>
+    {{ data.api_url_prefix }}/search?type=lyrics&q=hear+jerusalem_bells+ts=<current timestamp>&apiKey=<apikey>&apiPass=<apipass>
 
 
 #### Example response:
