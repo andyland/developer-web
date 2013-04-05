@@ -48,6 +48,8 @@ step 5 is to simply hash the string `GET\n/lyrics/coldplay/clocks\n1364859625123
 
 Testing
 =======
-An easy way to test if your code is producing the proper apiPass is to use [this online tool](http://www.freeformatter.com/hmac-generator.html).
-Make sure to change the digest algorithm to md5 and put your apiSecret in for the Secret Key.
+An easy way to test if your code is producing the proper apiPass is to do the following:  
+
+1. put the string you are trying to hash into a text file. **make sure there is not a newline at the end of the file!  vim will add this newline without you knowing!**
+1. run `cat /path/to/file.txt | openssl dgst -hex -md5 -hmac 1234567`  where 1234567 gets replaced with your API Secret
 
